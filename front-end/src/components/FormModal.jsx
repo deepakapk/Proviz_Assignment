@@ -16,7 +16,7 @@ const FormModal = ({ closeModal }) => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try {
-            const response = await axios.post("http://localhost:4000/api/v1/user/post/application",{firstname,lastname,email,phone,message},{withCredentials:true,headers:{
+            const response = await axios.post("https://proviz-assignment-backend.onrender.com/api/v1/user/post/application",{firstname,lastname,email,phone,message},{withCredentials:true,headers:{
                 "Content-Type":"application/json"
             }})
             toast.success(response.data.message)

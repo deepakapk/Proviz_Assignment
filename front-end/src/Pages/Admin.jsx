@@ -6,7 +6,7 @@ const Admin = () => {
 
   const fetchApplications = async()=>{
     try{
-      const {data} = await axios.get("http://localhost:4000/api/v1/user/get/application",{withCredentials:true})
+      const {data} = await axios.get("https://proviz-assignment-backend.onrender.com/api/v1/user/get/application",{withCredentials:true})
       setApplications(data.applications)
     }
     catch(error){
